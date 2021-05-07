@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  data_nascimento: 2021-05-06
+  cpf: 1
+  senha: MyString
+  nome_mae: MyString
+  telefone: 1
+  email: MyString
+  endereco: one
+
+two:
+  nome: MyString
+  data_nascimento: 2021-05-06
+  cpf: 1
+  senha: MyString
+  nome_mae: MyString
+  telefone: 1
+  email: MyString
+  endereco: two
