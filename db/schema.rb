@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_012529) do
+ActiveRecord::Schema.define(version: 2021_05_07_013013) do
 
   create_table "enderecos", force: :cascade do |t|
     t.integer "cep"
@@ -22,4 +22,19 @@ ActiveRecord::Schema.define(version: 2021_05_07_012529) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "usuarios", force: :cascade do |t|
+    t.string "nome"
+    t.date "data_nascimento"
+    t.integer "cpf"
+    t.string "senha"
+    t.string "nome_mae"
+    t.integer "telefone"
+    t.string "email"
+    t.integer "endereco_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["endereco_id"], name: "index_usuarios_on_endereco_id"
+  end
+
+  add_foreign_key "usuarios", "enderecos"
 end
