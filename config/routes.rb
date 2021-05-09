@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vacinacaos
   root 'home#index'
   
   resources :usuarios

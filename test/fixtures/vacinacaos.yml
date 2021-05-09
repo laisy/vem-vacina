@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_vacina: MyString
+  descricao_localizacao: MyText
+  data: 2021-05-09
+  horario: 2021-05-09 16:31:50
+
+two:
+  nome_vacina: MyString
+  descricao_localizacao: MyText
+  data: 2021-05-09
+  horario: 2021-05-09 16:31:50
