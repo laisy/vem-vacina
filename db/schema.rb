@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_013013) do
+ActiveRecord::Schema.define(version: 2021_05_09_193150) do
 
   create_table "enderecos", force: :cascade do |t|
     t.integer "cep"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2021_05_07_013013) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["endereco_id"], name: "index_usuarios_on_endereco_id"
+  end
+
+  create_table "vacinacaos", force: :cascade do |t|
+    t.string "nome_vacina"
+    t.text "descricao_localizacao"
+    t.date "data"
+    t.time "horario"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "usuarios", "enderecos"

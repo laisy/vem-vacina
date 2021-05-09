@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :data_nascimento %>
-    <%= form.date_select :data_nascimento %>
+    <%= form.date_select(:data_nascimento, :start_year =>1900, :end_year =>2021) %>
   </div>
 
   <div class="field">
@@ -46,10 +46,8 @@
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
-    <%= form.label :endereco_id %>
-    <%= form.text_field :endereco_id %>
-  </div>
+  Endereço:
+  <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
 
   <div class="actions">
     <%= form.submit %>

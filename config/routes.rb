@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :vacinacaos
   root 'home#index'
   
   resources :usuarios
@@ -8,6 +7,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  # resources :enderecos
+  resources :enderecos
+  resources :vacinacaos
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -736,3 +736,595 @@ Processing by UsuariosController#new as HTML
 Completed 200 OK in 170ms (Views: 34.5ms | ActiveRecord: 5.7ms | Allocations: 16493)
 
 
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVacinacaos (20210509193150)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "vacinacaos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_vacina" varchar, "descricao_localizacao" text, "data" date, "horario" time, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210509193150"]]
+  [1m[35m (112.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:50:16 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 1858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 549ms (Views: 537.7ms | ActiveRecord: 0.0ms | Allocations: 25848)
+
+
+Started GET "/endereco" for 127.0.0.1 at 2021-05-09 18:50:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/endereco"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-09 18:51:16 -0300
+Processing by VacinacaosController#index as HTML
+  Rendering vacinacaos/index.html.erb within layouts/application
+  [1m[36mVacinacao Load (0.8ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos"[0m
+  ↳ app/views/vacinacaos/index.html.erb:17
+  Rendered vacinacaos/index.html.erb within layouts/application (Duration: 40.4ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 194ms (Views: 82.1ms | ActiveRecord: 6.5ms | Allocations: 7967)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-09 18:56:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VacinacaosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:56:16 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 4449)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-09 18:56:21 -0300
+Processing by VacinacaosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:56:21 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 4327)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-09 18:56:29 -0300
+Processing by VacinacaosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:56:29 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 4330)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:57:00 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms | Allocations: 4317)
+
+
+Started GET "/usuarios/" for 127.0.0.1 at 2021-05-09 18:57:06 -0300
+Processing by UsuariosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:57:07 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms | Allocations: 4311)
+
+
+Started GET "/vacinacaos/" for 127.0.0.1 at 2021-05-09 18:57:14 -0300
+Processing by VacinacaosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 317)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:57:14 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 4327)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 18:57:18 -0300
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, too_sh...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/" for 127.0.0.1 at 2021-05-09 18:58:06 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.0ms | Allocations: 4323)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-09 18:58:07 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 35.6ms | Allocations: 535)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 75.1ms | ActiveRecord: 0.0ms | Allocations: 5297)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 18:58:10 -0300
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, too_sh...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:04:27 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1246)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, too_sh...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:04:30 -0300
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, too_sh...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:05:46 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1246)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, too_sh...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:07:53 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1238)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+  validates :nome, presence: true, length:...
+            ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:3: Can't assign to true
+...validates :nome, presence: true, length: {minimum: 3, maximu...
+...                           ^~~~):
+  
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/models/usuario.rb:3: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/usuario.rb:3: Can't assign to true
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:08:23 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1559)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/usuario.rb:4:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:09:37 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1517)
+
+
+  
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  
+app/models/usuario.rb:4:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/" for 127.0.0.1 at 2021-05-09 19:15:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 4461)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:15:08 -0300
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1273)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:4: syntax error, unexpected '}'
+...w.-]+@[\w.-]+[.][a-z]{2,4}$/i/} 
+...                              ^):
+  
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:19:50 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1246)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:4: syntax error, unexpected '}'
+...^@][\w.-]+@[\w.-]+[.][a-z]$/i/} 
+...                              ^):
+  
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/models/usuario.rb:4: syntax error, unexpected '}'
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:20:03 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1272)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:4: syntax error, unexpected tSTRING_DEND, expecting end
+...eres é o máximo permitido " }
+...                              ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:5: syntax error, unexpected tSTRING_DEND, expecting '}'
+...nce: true, length: {minimum: 5}, confirmation: true
+...                              ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:7: syntax error, unexpected tSTRING_DEND, expecting '}'
+...eres é o máximo permitido " }
+...                              ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+...icality: { only_integer: true }, length: {minimum: 9, maximu...
+...                              ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+...ngth: {minimum: 9, maximum: 19}
+...                              ^):
+  
+app/models/usuario.rb:4: syntax error, unexpected tSTRING_DEND, expecting end
+app/models/usuario.rb:5: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:7: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:4: syntax error, unexpected tSTRING_DEND, expecting end
+app/models/usuario.rb:5: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:7: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:4: syntax error, unexpected tSTRING_DEND, expecting end
+app/models/usuario.rb:5: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:7: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/models/usuario.rb:8: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/controllers/usuarios_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:20:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 155.0ms | Allocations: 5481)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 172.1ms | Allocations: 5835)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 389ms (Views: 203.9ms | ActiveRecord: 2.7ms | Allocations: 21499)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:30:20 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/controllers/usuarios_controller.rb:69: syntax error, unexpected ':', expecting ')'
+...mail, :endereco_id, :vacinacao:id)
+...                              ^):
+  
+app/controllers/usuarios_controller.rb:69: syntax error, unexpected ':', expecting ')'
+app/controllers/usuarios_controller.rb:69: syntax error, unexpected ':', expecting ')'
+app/controllers/usuarios_controller.rb:69: syntax error, unexpected ':', expecting ')'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:30:50 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 44.4ms | Allocations: 4366)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 46.0ms | Allocations: 4691)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.1ms | Allocations: 15613)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:38:48 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 5.8ms | Allocations: 5870)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 79.9ms | Allocations: 6195)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms | Allocations: 7416)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:39:13 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 27.3ms | Allocations: 5871)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 31.1ms | Allocations: 6196)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 7415)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   # Endereço:
+    50:   # <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:39:16 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 21.5ms | Allocations: 5372)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 22.3ms | Allocations: 5446)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 5924)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   # Endereço:
+    50:   # <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:39:24 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 12.7ms | Allocations: 4658)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 211ms (Views: 198.8ms | ActiveRecord: 0.0ms | Allocations: 10200)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:50:17 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 24.1ms | Allocations: 5889)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 25.8ms | Allocations: 6219)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms | Allocations: 16642)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:52:25 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 13.3ms | Allocations: 5411)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5485)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.5ms | Allocations: 15811)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:52:28 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 11.9ms | Allocations: 5373)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 5447)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5924)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51: 
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/new.html.erb:3
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:53:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/endereco.rb:3:in `<class:Endereco>'
+app/models/endereco.rb:1:in `<main>'
+app/controllers/usuarios_controller.rb:69:in `set_enderecos'
+Started GET "/signup" for 127.0.0.1 at 2021-05-09 19:54:18 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  [1m[36mEndereco Load (33.1ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:69:in `map'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 81.1ms | Allocations: 4542)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 81.5ms | Allocations: 4636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 90.3ms | ActiveRecord: 36.3ms | Allocations: 21070)
+
+

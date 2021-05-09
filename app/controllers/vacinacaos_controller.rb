@@ -1,5 +1,6 @@
 class VacinacaosController < ApplicationController
   before_action :set_vacinacao, only: %i[ show edit update destroy ]
+  before_action :check_logado
 
   # GET /vacinacaos or /vacinacaos.json
   def index
@@ -24,9 +25,11 @@ class VacinacaosController < ApplicationController
     @vacinacao = Vacinacao.new(vacinacao_params)
 
     respond_to do |format|
-      if @vacinacao.save
-        format.html { redirect_to @vacinacao, notice: "Vacinacao was successfully created." }
-        format.json { render :show, status: :created, location: @vacinacao }
+      if :data > Date.today 
+        if @vacinacao.save
+          format.html { redirect_to @vacinacao, notice: "Agendamento de vacina marcado com sucesso!" }
+          format.json { render :show, status: :created, location: @vacinacao }
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @vacinacao.errors, status: :unprocessable_entity }
@@ -38,7 +41,7 @@ class VacinacaosController < ApplicationController
   def update
     respond_to do |format|
       if @vacinacao.update(vacinacao_params)
-        format.html { redirect_to @vacinacao, notice: "Vacinacao was successfully updated." }
+        format.html { redirect_to @vacinacao, notice: "Agendamento de vacina atualizada com sucesso!" }
         format.json { render :show, status: :ok, location: @vacinacao }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +54,7 @@ class VacinacaosController < ApplicationController
   def destroy
     @vacinacao.destroy
     respond_to do |format|
-      format.html { redirect_to vacinacaos_url, notice: "Vacinacao was successfully destroyed." }
+      format.html { redirect_to vacinacaos_url, notice: "Agendamento de vacina apagada com sucesso!" }
       format.json { head :no_content }
     end
   end

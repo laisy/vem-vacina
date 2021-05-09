@@ -1,6 +1,7 @@
 class UsuariosController < ApplicationController
 
   before_action :set_usuario, only: %i[ show edit update destroy ]
+  before_action :set_enderecos, only: [:new, :create, :edit]
   before_action :check_logado, only: [:edit, :show, :destroy, :update, :index]
 
   # GET /usuarios or /usuarios.json
@@ -64,8 +65,12 @@ class UsuariosController < ApplicationController
       @usuario = Usuario.find(params[:id])
     end
 
+    def set_enderecos
+      @enderecos = Endereco.all.map{ |c| [c.rua, c.id]}
+    end
+
     # Only allow a list of trusted parameters through.
     def usuario_params
-      params.require(:usuario).permit(:nome, :data_nascimento, :cpf, :senha, :nome_mae, :telefone, :email, :endereco_id)
+      params.require(:usuario).permit(:nome, :data_nascimento, :cpf, :senha, :nome_mae, :telefone, :email, :endereco_id, :vacinacao_id)
     end
 end
