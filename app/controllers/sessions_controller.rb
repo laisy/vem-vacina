@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
   def create
     usuario = Usuario.find_by_cpf(params[:cpf])
-    if usuario && usuario.authenticate(params[:senha])
+    if usuario.autenticar(params[:senha])
       session[:usuario_id] = usuario.id
-      redirect_to root_url, notice: "Logged in!"
+      redirect_to root_url, notice: "Logado!"
     else
-      flash.now[:alert] = "CPF or password is invalid"
+      flash.now[:alert] = "CPF ou senha é inválida"
       render "new"
     end
   end

@@ -1,7 +1,7 @@
 class UsuariosController < ApplicationController
 
   before_action :set_usuario, only: %i[ show edit update destroy ]
-  #before_action :check_logado, only: [:edit, :show, :destroy, :update, :index]
+  before_action :check_logado, only: [:edit, :show, :destroy, :update, :index]
   before_action :set_enderecos, only: [:new, :create, :edit]
 
   # GET /usuarios or /usuarios.json

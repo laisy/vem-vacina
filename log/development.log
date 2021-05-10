@@ -3709,3 +3709,419 @@ Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms | Allocations: 
 NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f53910f5ca8>):
   
 app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:51:07 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GMAGK+4agNGbMW1SUdlThbK9hp6LtpyLSWA76olw+u2mrz0KD7lx3ylK3WDAQ2Tmuslvorq0wCNWVp5JdfnobQ==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms | Allocations: 3086)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x000055ea228ea618>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:57:20 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GMAGK+4agNGbMW1SUdlThbK9hp6LtpyLSWA76olw+u2mrz0KD7lx3ylK3WDAQ2Tmuslvorq0wCNWVp5JdfnobQ==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (18.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "12345678999"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 433ms (Views: 113.4ms | ActiveRecord: 18.2ms | Allocations: 7878)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:57:37 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pX7oc9ugkbtvT16DLTqLiWe+AYBVrK4K7qZrnlAYis6XmnIL9UFrz2zMxumkTKm/vsKqiWXqcgWhnqUociMnWQ==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "12345678999"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 5129)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2021-05-09 22:58:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:21
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 74.5ms | Allocations: 8435)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 112ms (Views: 87.3ms | ActiveRecord: 3.6ms | Allocations: 14874)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 22:58:24 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 4499)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-09 22:58:26 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 4693)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:58:36 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BH1Ru8npJQ5pPx0hcEqrJ2NKQV2m3/4lVeyCa4jZMCa6EmqaKErUANtErRPh0JxEaz6oYZfdoo1K2ifIdFAipg==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "12345678999"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 23.7ms | ActiveRecord: 0.5ms | Allocations: 5336)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:59:16 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZyAp1CwG6RO2W9HCUYUdlBQlaZipJa48Eqj7VK/wVVVVxLOsAucTZ7XYSajY8z+izVnCkZljcjNdkDXijcv4wg==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.9ms | Allocations: 12659)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f5390c09758>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 22:59:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZyAp1CwG6RO2W9HCUYUdlBQlaZipJa48Eqj7VK/wVVVVxLOsAucTZ7XYSajY8z+izVnCkZljcjNdkDXijcv4wg==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 404 Not Found in 15ms (ActiveRecord: 1.6ms | Allocations: 4357)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Usuario with 'id'=12345678999):
+  
+app/controllers/sessions_controller.rb:5:in `create'
+Started GET "/sessions" for 127.0.0.1 at 2021-05-09 23:02:40 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-05-09 23:03:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 315.1ms | ActiveRecord: 0.0ms | Allocations: 4494)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-09 23:03:06 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 4701)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:03:19 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (26.9ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 28.2ms | Allocations: 14556)
+
+
+  
+NameError (uninitialized constant SessionsController::Nil
+Did you mean?  NIL
+               NIO):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started GET "/sessions" for 127.0.0.1 at 2021-05-09 23:03:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:03:42 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 9.4ms | Allocations: 12697)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f53848ea560>):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:07:03 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (12.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 15.2ms | Allocations: 12697)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f539161d780>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:07:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms | Allocations: 12875)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f5384733758>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:08:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.2ms | Allocations: 13667)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<Usuario:0x00007f5390b1e668>
+Did you mean?  password):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:10:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.6ms | Allocations: 12770)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Usuario:0x00007f5384849250>):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:13:21 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GVeHRCPQnUGC+NwlXtPuxiABCefDHJkTXFBLU8w6QpinOLxlwnNsTzCDbBfPSdmlKHXg2/IexbtDZu7wMLNQGA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1270)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:18: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/usuario.rb:18: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:18: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:18: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:5:in `create'
+Started GET "/routes" for 127.0.0.1 at 2021-05-09 23:16:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-05-09 23:17:00 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 217ms (Views: 214.4ms | ActiveRecord: 0.0ms | Allocations: 4506)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-09 23:17:02 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 4694)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:17:11 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Hkbf5K17xxa/206KGts5Q64CIeX3E4t6E3nCpa5Rlb2gKeTFTNg2GA2g/riLQQ4gpnbI2cYR19IMT2cGUtiHPQ==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 7.1ms | ActiveRecord: 7.4ms | Allocations: 14833)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:18:08 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7yTdT7Aq6FTD25ikFMiUOesvcSdl+Fx/wctXO1t9HkPdwEc3nssSIMBYAM6dvrYPMlPaLlW+gHCO85mNeUaz1A==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 28ms (ActiveRecord: 1.9ms | Allocations: 10763)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 23:18:08 -0300
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2205)
+
+
+  
+NameError (uninitialized constant ApplicationController::User):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/home_controller.rb:3:in `index'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-09 23:19:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7yTdT7Aq6FTD25ikFMiUOesvcSdl+Fx/wctXO1t9HkPdwEc3nssSIMBYAM6dvrYPMlPaLlW+gHCO85mNeUaz1A==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (44.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 229ms (ActiveRecord: 50.9ms | Allocations: 10555)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 23:19:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 105.4ms | ActiveRecord: 0.3ms | Allocations: 5248)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-09 23:19:28 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 20.0ms | Allocations: 415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 0.5ms | Allocations: 6217)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2021-05-09 23:19:31 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:21
+  Rendered usuarios/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 31.0ms | ActiveRecord: 1.1ms | Allocations: 5726)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-09 23:19:37 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (3.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 104)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 34.0ms | ActiveRecord: 3.4ms | Allocations: 4961)
+
+
