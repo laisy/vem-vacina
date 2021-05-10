@@ -1,6 +1,6 @@
 class EnderecosController < ApplicationController
   before_action :set_endereco, only: %i[ show edit update destroy ]
-  before_action :check_logado
+  before_action :check_logado, only: [:edit, :show, :destroy, :update, :index]
 
   # GET /enderecos or /enderecos.json
   def index
@@ -26,7 +26,7 @@ class EnderecosController < ApplicationController
 
     respond_to do |format|
       if @endereco.save
-        format.html { redirect_to @endereco, notice: "Endereco was successfully created." }
+        format.html { redirect_to signup_path, notice: "Endereco was successfully created." }
         format.json { render :show, status: :created, location: @endereco }
       else
         format.html { render :new, status: :unprocessable_entity }
