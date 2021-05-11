@@ -22,7 +22,6 @@
         <td><%= endereco.bairro %></td>
         <td><%= endereco.logradouro %></td>
         <td><%= endereco.complemento %></td>
-        <td><%= link_to 'Show', endereco %></td>
         <td><%= link_to 'Edit', edit_endereco_path(endereco) %></td>
         <td><%= link_to 'Destroy', endereco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -33,3 +32,4 @@
 <br>
 
 <%= link_to 'New Endereco', new_endereco_path %>
+<%= link_to 'Back', root_path %>

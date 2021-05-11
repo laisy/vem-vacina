@@ -5,6 +5,7 @@ class CreateVacinacaos < ActiveRecord::Migration[6.0]
       t.text :descricao_localizacao
       t.date :data
       t.time :horario
+      t.references :usuario, null: false, foreign_key: true
 
       t.timestamps
     end

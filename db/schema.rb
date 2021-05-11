@@ -41,9 +41,12 @@ ActiveRecord::Schema.define(version: 2021_05_09_193150) do
     t.text "descricao_localizacao"
     t.date "data"
     t.time "horario"
+    t.integer "usuario_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["usuario_id"], name: "index_vacinacaos_on_usuario_id"
   end
 
   add_foreign_key "usuarios", "enderecos"
+  add_foreign_key "vacinacaos", "usuarios"
 end

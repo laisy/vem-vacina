@@ -13,7 +13,7 @@ class Usuario < ApplicationRecord
 
   def autenticar(senha_view)
     if self.senha != senha_view
-        redirect_to login_path
+        return false
     else
       return true
     end

@@ -1,7 +1,8 @@
 <h1> VEM VACINA </h1>
 <% if current_user %>
-  Logged in as <%= current_user.cpf %>.
-  <%= link_to "Log Out", logout_path %>
+  Bem vindo <%= current_user.nome %>
+  </br>
+  <%= link_to "Sair", logout_path %>
 <% else %>
   <%= link_to "Cadastrar-se", new_endereco_path %> or 
   <%= link_to "Logar-se", login_path %>
@@ -11,8 +12,17 @@
 <% if current_user %>
   </br>
   <h5> USUARIO </h5>
-  <%= link_to 'Show User', @current_user %>
+  <%= link_to 'Mostrar Usuario', @current_user %>
+
+  <h5> VACINACÃO </h5>
+  <%= link_to 'Nova Vacinação', new_vacinacao_path %>
+  </br>
+  <%= link_to 'Mostrar Vacinação', vacinacaos_path %>
+
+  <h5> ENDEREÇO </h5>
+  <%= link_to 'Editar Endereço', edit_endereco_path(@current_user.endereco_id) %>
+
 
 <% else %>
-  You need to login to gain access.
+  Você precisa está logado para ter acesso
 <% end %>

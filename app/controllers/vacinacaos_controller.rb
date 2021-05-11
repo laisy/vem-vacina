@@ -23,9 +23,10 @@ class VacinacaosController < ApplicationController
   # POST /vacinacaos or /vacinacaos.json
   def create
     @vacinacao = Vacinacao.new(vacinacao_params)
+    @vacinacao.write_attribute(:usuario_id, @current_user.id)
 
     respond_to do |format|
-      if :data > Date.today 
+      if @vacinacao.data > Date.today 
         if @vacinacao.save
           format.html { redirect_to @vacinacao, notice: "Agendamento de vacina marcado com sucesso!" }
           format.json { render :show, status: :created, location: @vacinacao }
