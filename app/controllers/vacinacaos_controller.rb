@@ -26,11 +26,9 @@ class VacinacaosController < ApplicationController
     @vacinacao.write_attribute(:usuario_id, @current_user.id)
 
     respond_to do |format|
-      if @vacinacao.data > Date.today 
-        if @vacinacao.save
-          format.html { redirect_to @vacinacao, notice: "Agendamento de vacina marcado com sucesso!" }
-          format.json { render :show, status: :created, location: @vacinacao }
-        end
+      if @vacinacao.save
+        format.html { redirect_to @vacinacao, notice: "Agendamento de vacina marcado com sucesso!" }
+        format.json { render :show, status: :created, location: @vacinacao }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @vacinacao.errors, status: :unprocessable_entity }
