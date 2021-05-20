@@ -6185,3 +6185,753 @@ Completed 406 Not Acceptable in 31ms (ActiveRecord: 0.9ms | Allocations: 3584)
 ActionController::UnknownFormat (ActionController::UnknownFormat):
   
 app/controllers/vacinacaos_controller.rb:28:in `create'
+Started GET "/" for 127.0.0.1 at 2021-05-19 22:59:26 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 368ms (Views: 329.3ms | ActiveRecord: 0.0ms | Allocations: 9516)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-19 22:59:48 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 44.9ms | Allocations: 538)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 89.4ms | ActiveRecord: 0.0ms | Allocations: 5321)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 22:59:54 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BHHzhSCF3Em81fmkvAeCFXXMGSK6IMhljNFqd/F2wEIGlwsbrd7ULNO3J3mnmjijkmKlyDWrFbjLbsWR9ev2Hg==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 1312)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:7: syntax error, unexpected '(', expecting end
+...ue, if: :validarDataNascimento()
+...                              ^
+/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/usuario.rb:7: syntax error, unexpected '(', expecting end
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:7: syntax error, unexpected '(', expecting end
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:7: syntax error, unexpected '(', expecting end
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 23:00:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BHHzhSCF3Em81fmkvAeCFXXMGSK6IMhljNFqd/F2wEIGlwsbrd7ULNO3J3mnmjijkmKlyDWrFbjLbsWR9ev2Hg==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1242)
+
+
+  
+SyntaxError (/home/laisy/Documentos/BCC 2020.1/ES/vem-vacina/app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/models/usuario.rb:29: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 23:00:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BHHzhSCF3Em81fmkvAeCFXXMGSK6IMhljNFqd/F2wEIGlwsbrd7ULNO3J3mnmjijkmKlyDWrFbjLbsWR9ev2Hg==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms | Allocations: 1274)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/usuario.rb:3:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/sessions_controller.rb:5:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 23:02:58 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BHHzhSCF3Em81fmkvAeCFXXMGSK6IMhljNFqd/F2wEIGlwsbrd7ULNO3J3mnmjijkmKlyDWrFbjLbsWR9ev2Hg==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/usuario.rb:9:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/sessions_controller.rb:5:in `create'
+Started GET "/sessions" for 127.0.0.1 at 2021-05-19 23:03:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 23:03:31 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"BHHzhSCF3Em81fmkvAeCFXXMGSK6IMhljNFqd/F2wEIGlwsbrd7ULNO3J3mnmjijkmKlyDWrFbjLbsWR9ev2Hg==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (104.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678910], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 314ms (ActiveRecord: 107.7ms | Allocations: 11993)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:03:32 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 237ms (Views: 234.4ms | ActiveRecord: 0.2ms | Allocations: 5351)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-19 23:03:37 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 98.3ms | Allocations: 415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 145ms (Views: 134.2ms | ActiveRecord: 0.9ms | Allocations: 6478)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:03:44 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 0.7ms | Allocations: 5000)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-05-19 23:03:45 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:03:45 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 4366)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:03:47 -0300
+Processing by EnderecosController#new as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/endereco.rb:4:in `<class:Endereco>'
+app/models/endereco.rb:1:in `<main>'
+app/controllers/enderecos_controller.rb:16:in `new'
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:04:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4463)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:04:10 -0300
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 107.7ms | Allocations: 3546)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 120.1ms | Allocations: 3893)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 219ms (Views: 145.9ms | ActiveRecord: 5.4ms | Allocations: 15627)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:04:26 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"ycONV9egIgbCMWps44dA0ZtRUq03JQoLibPBW2n8iz/ckn1PyxeiWgWpg24CppoqQJdpW6FcKADj347MjuvcxQ==", "endereco"=>{"cep"=>"5536000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 12.4ms | Allocations: 1583)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1674)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 176ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 10550)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:04:31 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"93wSv3SabS/Te/g2w/CSvhXIOrmfSIZO18CZdMSpUawA8mP09RLjqDqrSsA7YqZCwzw1Oe+tTInCJEgMwQJhhA==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 15.2ms | Allocations: 1429)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 65ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 6762)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:04:38 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"jabXgKmau0RMQ4P4R5ZIap0kHgm5LvH3FftNo3F+Qbh6KKbLKBI1w6WTMQ6/BHyWS9ARicnLOzAAH5zbdNVxkA==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 5.0ms | Allocations: 1429)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 18ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 6763)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:04:39 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"bs8fFPMwFVWY+MRT+NWhjO6XL60MpfcAW7QO29qg7eWZQW5fcrib0nEodqUAR5VwOGMgLXxAPcdOUN+j3wvdzQ==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 14.2ms | Allocations: 1429)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 42ms (Views: 31.0ms | ActiveRecord: 0.0ms | Allocations: 6759)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:04:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4331)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:04:49 -0300
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 14.8ms | Allocations: 1264)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.0ms | Allocations: 5624)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:05:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"hzSrSi0+sZQR5rRYZbFtxN2k+P1DvTLikpqw68wOQ5ySZVtSMYkxyNZ+XVqEkLc/BmLDC9XEEOn49v98KxkUZg==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[36mEndereco Create (23.7ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua Jose Frazao da silva, 25"], ["complemento", ""], ["created_at", "2021-05-20 02:05:22.257327"], ["updated_at", "2021-05-20 02:05:22.257327"]]
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[35m (63.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+Redirected to http://127.0.0.1:3000/signup
+Completed 302 Found in 118ms (ActiveRecord: 88.0ms | Allocations: 12114)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-19 23:05:22 -0300
+Processing by UsuariosController#new as HTML
+  [1m[36mEndereco Load (0.5ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 108.7ms | Allocations: 5360)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 136.0ms | Allocations: 5791)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 194ms (Views: 163.7ms | ActiveRecord: 1.3ms | Allocations: 20429)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:06:07 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"4ZOJbgR7un6ST/LusS2ol0Cy8axsxx0a0nreYuW06XoWHfglhfM0+XufQBhJv5xrlkb+LBwi193Hng8a4B/ZUg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"20", "cpf"=>"12345678912", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"87996226421", "email"=>"laisyF@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.8ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678912], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "laisyF@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.5ms | Allocations: 5791)
+
+
+  
+ArgumentError (comparison of Symbol with Date failed):
+  
+app/models/usuario.rb:23:in `<'
+app/models/usuario.rb:23:in `validarDataNascimento'
+app/controllers/usuarios_controller.rb:31:in `block in create'
+app/controllers/usuarios_controller.rb:30:in `create'
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:09:18 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"4ZOJbgR7un6ST/LusS2ol0Cy8axsxx0a0nreYuW06XoWHfglhfM0+XufQBhJv5xrlkb+LBwi193Hng8a4B/ZUg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"20", "cpf"=>"12345678912", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"87996226421", "email"=>"laisyF@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.3ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 3.0ms | Allocations: 12458)
+
+
+  
+NameError (undefined local variable or method `validarDataNascimento' for #<Class:0x000055615612bbe8>
+Did you mean?  validates_associated):
+  
+app/models/usuario.rb:7:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/usuarios_controller.rb:28:in `create'
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:09:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"4ZOJbgR7un6ST/LusS2ol0Cy8axsxx0a0nreYuW06XoWHfglhfM0+XufQBhJv5xrlkb+LBwi193Hng8a4B/ZUg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"20", "cpf"=>"12345678912", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"87996226421", "email"=>"laisyF@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.2ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.2ms | Allocations: 12466)
+
+
+  
+NameError (undefined local variable or method `validarDataNascimento' for #<Class:0x00007fc3fc55b3c0>
+Did you mean?  validates_associated):
+  
+app/models/usuario.rb:7:in `<class:Usuario>'
+app/models/usuario.rb:1:in `<main>'
+app/controllers/usuarios_controller.rb:28:in `create'
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:09:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"4ZOJbgR7un6ST/LusS2ol0Cy8axsxx0a0nreYuW06XoWHfglhfM0+XufQBhJv5xrlkb+LBwi193Hng8a4B/ZUg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"20", "cpf"=>"12345678912", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"87996226421", "email"=>"laisyF@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.3ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678912], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "laisyF@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "endereco_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Laisy"], ["data_nascimento", "2021-05-20"], ["cpf", 12345678912], ["senha", "123456"], ["nome_mae", "Rejane Cristina"], ["telefone", 87996226421], ["email", "laisyF@email.com"], ["endereco_id", 1], ["created_at", "2021-05-20 02:09:55.329675"], ["updated_at", "2021-05-20 02:09:55.329675"]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+Redirected to http://127.0.0.1:3000/usuarios/2
+Completed 302 Found in 119ms (ActiveRecord: 41.7ms | Allocations: 24520)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2021-05-19 23:09:55 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:09:55 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 4828)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:10:01 -0300
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 15.9ms | Allocations: 1331)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1424)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 5921)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-19 23:10:10 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 4646)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-19 23:10:12 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"peLOLVZ4cu0Iw5xQlogQ1+B45GNh0aSU88jNa+aVS6GnBDaz2yN6iGehQo2NFaphB9ZYie5aeUm0d2KN4gh9/Q==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678910], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1139)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:10:13 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4983)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-19 23:10:14 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 5653)
+
+
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2021-05-19 23:10:15 -0300
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mEndereco Load (0.6ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  Rendering usuarios/edit.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 25.8ms | Allocations: 4359)
+  Rendered usuarios/edit.html.erb within layouts/application (Duration: 43.9ms | Allocations: 4571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 69.8ms | ActiveRecord: 2.1ms | Allocations: 10727)
+
+
+Started PATCH "/usuarios/1" for 127.0.0.1 at 2021-05-19 23:10:27 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"authenticity_token"=>"m2bFBXFGMykHspW10sIJes4XhMCvyNUlwWKQARAq28BuMjWnjCbu/GIaAtc82IlqqOzEWwdXY0TAVTogodZyrg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"6", "data_nascimento(3i)"=>"24", "cpf"=>"12345678910", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"9999999984444444", "email"=>"laisy@email.com", "endereco_id"=>"1"}, "commit"=>"Update Usuario", "id"=>"1"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[36mUsuario Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678910], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "laisy@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  Rendering usuarios/edit.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 13.7ms | Allocations: 5507)
+  Rendered usuarios/edit.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5581)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 3.3ms | Allocations: 12542)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51:   
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/edit.html.erb:3
+app/controllers/usuarios_controller.rb:48:in `block (2 levels) in update'
+app/controllers/usuarios_controller.rb:43:in `update'
+Started PATCH "/usuarios/1" for 127.0.0.1 at 2021-05-19 23:10:47 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"authenticity_token"=>"m2bFBXFGMykHspW10sIJes4XhMCvyNUlwWKQARAq28BuMjWnjCbu/GIaAtc82IlqqOzEWwdXY0TAVTogodZyrg==", "usuario"=>{"nome"=>"Laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"6", "data_nascimento(3i)"=>"24", "cpf"=>"12345678910", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"9999999984444444", "email"=>"laisy@email.com", "endereco_id"=>"1"}, "commit"=>"Update Usuario", "id"=>"1"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[36mUsuario Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678910], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[36mUsuario Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "laisy@email.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:44:in `block in update'
+  Rendering usuarios/edit.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 16.1ms | Allocations: 5494)
+  Rendered usuarios/edit.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5568)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 4.0ms | Allocations: 12478)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    47:   </div>
+    48: 
+    49:   Endereço:
+    50:   <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
+    51:   
+    52:   <div class="actions">
+    53:     <%= form.submit %>
+  
+app/views/usuarios/_form.html.erb:50
+app/views/usuarios/_form.html.erb:1
+app/views/usuarios/edit.html.erb:3
+app/controllers/usuarios_controller.rb:48:in `block (2 levels) in update'
+app/controllers/usuarios_controller.rb:43:in `update'
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:10:53 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 32.3ms | ActiveRecord: 0.8ms | Allocations: 4981)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-05-19 23:10:55 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:10:55 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4367)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:10:56 -0300
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 17.3ms | Allocations: 1272)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 1365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.0ms | Allocations: 5630)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:11:03 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"v4IYUNF7AM9QpH3cFgc2vxf0LgiIXGp3h+6CK8Gt22Oq0+hIzcyAk5c8lN73JuxEzDIV/h4lSHztgs28JrqMmQ==", "endereco"=>{"cep"=>"55", "cidade"=>"", "bairro"=>"", "logradouro"=>"", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 3.7ms | Allocations: 2205)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 17ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9249)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:11:15 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"AdyuxnxUnXlLkud9yZM3HrRg/OI+JZoKtqZTdlmXVpL2Ut+N/dwT/qJCVYsxAQPiYpTzYk7AUM2jQoIOXDxmug==", "endereco"=>{"cep"=>"5536000", "cidade"=>"Caetés", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 8.9ms | Allocations: 1433)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 28ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 6776)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:11:23 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"HRKMez7Mgf8RgQIeMIbLs0wgmkFVP0znmxsWl2C/EaHqnP0wv0QPePhRsOjIFP9PmtSVwSXahiCO/8fvZRQhiQ==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetés", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[36mEndereco Create (0.9ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetés"], ["bairro", "Centro"], ["logradouro", "Rua Jose Frazao da silva, 25"], ["complemento", ""], ["created_at", "2021-05-20 02:11:23.211014"], ["updated_at", "2021-05-20 02:11:23.211014"]]
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[35m (51.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+Redirected to http://127.0.0.1:3000/signup
+Completed 302 Found in 76ms (ActiveRecord: 52.8ms | Allocations: 5129)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-19 23:11:23 -0300
+Processing by UsuariosController#new as HTML
+  [1m[36mEndereco Load (0.3ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 8.0ms | Allocations: 4289)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4380)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 9342)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:12:06 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"2GYyTQzm3nCdUcv/fkhLWslruuiOB3kcLr7xxVndYWkv6EMGjW5Q93SBeQmG2n+mH5+1aP7is9s7WiC9XHZRQQ==", "usuario"=>{"nome"=>"Maria", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"30", "cpf"=>"12345678963", "senha"=>"123456", "nome_mae"=>"Rejane Cristina", "telefone"=>"87999663322", "email"=>"maria@email.com", "endereco_id"=>"2"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.7ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678963], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "maria@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Create (2.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "endereco_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Maria"], ["data_nascimento", "2021-05-30"], ["cpf", 12345678963], ["senha", "123456"], ["nome_mae", "Rejane Cristina"], ["telefone", 87999663322], ["email", "maria@email.com"], ["endereco_id", 2], ["created_at", "2021-05-20 02:12:06.377484"], ["updated_at", "2021-05-20 02:12:06.377484"]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+Redirected to http://127.0.0.1:3000/usuarios/3
+Completed 302 Found in 167ms (ActiveRecord: 86.3ms | Allocations: 8395)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2021-05-19 23:12:06 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:66:in `set_usuario'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 889)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:12:06 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 4347)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:13:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 3.8ms | Allocations: 1334)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 21.2ms | ActiveRecord: 2.1ms | Allocations: 12437)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:13:10 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 4447)
+
+
+Started GET "/enderecos/new" for 127.0.0.1 at 2021-05-19 23:13:11 -0300
+Processing by EnderecosController#new as HTML
+  Rendering enderecos/new.html.erb within layouts/application
+  Rendered enderecos/_form.html.erb (Duration: 6.0ms | Allocations: 1264)
+  Rendered enderecos/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 5618)
+
+
+Started POST "/enderecos" for 127.0.0.1 at 2021-05-19 23:13:24 -0300
+Processing by EnderecosController#create as HTML
+  Parameters: {"authenticity_token"=>"AseorN8UpMgqEx3BEWnz2qlMZJiS4LPlrBzIPgkiwI4Xlli0w6MklO2L9MPwSCkhcopfbgSZke7GcIep7jWXdA==", "endereco"=>{"cep"=>"55360000", "cidade"=>"Caetes", "bairro"=>"Centro", "logradouro"=>"Rua Jose Frazao da silva, 25", "complemento"=>""}, "commit"=>"Create Endereco"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[36mEndereco Create (1.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua Jose Frazao da silva, 25"], ["complemento", ""], ["created_at", "2021-05-20 02:13:24.437251"], ["updated_at", "2021-05-20 02:13:24.437251"]]
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+  [1m[35m (99.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/enderecos_controller.rb:28:in `block in create'
+Redirected to http://127.0.0.1:3000/signup
+Completed 302 Found in 126ms (ActiveRecord: 101.0ms | Allocations: 5438)
+
+
+Started GET "/signup" for 127.0.0.1 at 2021-05-19 23:13:24 -0300
+Processing by UsuariosController#new as HTML
+  [1m[36mEndereco Load (0.2ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 9.4ms | Allocations: 4382)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4475)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 18.2ms | ActiveRecord: 1.2ms | Allocations: 18808)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:13:49 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"Le8Mg6KSJyRTdFFCvibgOV4mkorstX0xSXBFduOBsFfaYX3IIxqpo7qk47RGtNTFiNKdCpxQt/ZclJQO5iqAfw==", "usuario"=>{"nome"=>"laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"29", "cpf"=>"12345678974", "senha"=>"123456", "nome_mae"=>"Rejane", "telefone"=>"87999635241", "email"=>"maria@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.4ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678974], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "maria@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 19.5ms | Allocations: 4617)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 81ms (Views: 31.1ms | ActiveRecord: 2.0ms | Allocations: 14733)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:13:53 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"lTMWBfVb0JFq6s8gAFILRIufJQnNyHBTJlEt7pwK+XNivWdOdNNeFoM6fdb4wD+4XWsqib0tupQztfyWmaHJWw==", "usuario"=>{"nome"=>"laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"29", "cpf"=>"12345678974", "senha"=>"123456", "nome_mae"=>"Rejane", "telefone"=>"87999635241", "email"=>"mariaa@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.5ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678974], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "mariaa@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 18.0ms | Allocations: 4475)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 4566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 86ms (Views: 34.1ms | ActiveRecord: 2.9ms | Allocations: 13946)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-19 23:15:10 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"Yo1pGGTj9oAe7hSI48VtHDJ5FDoVl7igfWmueFwmYwyVAxhT5Wt4B/c+pn4bV1ng5I0bumVycmdojX8AWY1TJA==", "usuario"=>{"nome"=>"laisy", "data_nascimento(1i)"=>"2021", "data_nascimento(2i)"=>"5", "data_nascimento(3i)"=>"29", "cpf"=>"12345678974", "senha"=>"123456", "nome_mae"=>"Rejane", "telefone"=>"87999635241", "email"=>"mariaa@email.com", "endereco_id"=>"1"}, "commit"=>"Create Usuario"}
+  [1m[36mEndereco Load (0.9ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos"[0m
+  ↳ app/controllers/usuarios_controller.rb:70:in `map'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678974], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "mariaa@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:31:in `block in create'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 6.8ms | Allocations: 4544)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 313ms (Views: 175.0ms | ActiveRecord: 6.9ms | Allocations: 30035)
+
+
+Started GET "/enderecos" for 127.0.0.1 at 2021-05-19 23:15:33 -0300
+Processing by EnderecosController#index as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-19 23:15:33 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 4371)
+
+
