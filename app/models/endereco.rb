@@ -1,5 +1,7 @@
 class Endereco < ApplicationRecord
-  validates :cep, presence: true, numericality: { only_integer: true }, length: {minimum: 8,  maximum: 11}
+  belongs_to :usuario
+  
+  validates :cep, presence: true, numericality: { only_integer: true }, length: 8
   validates :cidade, presence: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum:50, too_long: "%{count} caracteres é o máximo permitido " }
   validates :bairro, presence: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum:50, too_long: "%{count} caracteres é o máximo permitido " }
   validates :logradouro, presence: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum:50, too_long: "%{count} caracteres é o máximo permitido " }
