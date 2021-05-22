@@ -12,12 +12,12 @@
 
 <p>
   <strong>Data:</strong>
-  <%= @vacinacao.data %>
+  <%= @vacinacao.data.strftime('%d/%m/%Y') %>
 </p>
 
 <p>
   <strong>Horario:</strong>
-  <%= @vacinacao.horario %>
+  <%= @vacinacao.horario.strftime('%H:%M') %>
 </p>
 
 <%= link_to 'Editar', edit_vacinacao_path(@vacinacao) %> |

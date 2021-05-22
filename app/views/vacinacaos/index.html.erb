@@ -18,8 +18,8 @@
       <tr>
         <td><%= vacinacao.nome_vacina %></td>
         <td><%= vacinacao.descricao_localizacao %></td>
-        <td><%= vacinacao.data %></td>
-        <td><%= vacinacao.horario %></td>
+        <td><%= vacinacao.data.strftime('%d/%m/%Y') %></td>
+        <td><%= vacinacao.horario.strftime('%H:%M') %></td>
         <td><%= link_to 'Mostrar', vacinacao %></td>
         <td><%= link_to 'Editar', edit_vacinacao_path(vacinacao) %></td>
         <td><%= link_to 'Deletar', vacinacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
