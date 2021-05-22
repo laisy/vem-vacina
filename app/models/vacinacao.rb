@@ -8,7 +8,7 @@ class Vacinacao < ApplicationRecord
 
   def validarData
     if data.present? && data < Date.today
-      errors.add(:data, "não pode ser no passado)
+      errors.add(:data, "não pode ser no passado")
     end
   end
 

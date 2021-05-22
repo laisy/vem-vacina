@@ -1,10 +1,11 @@
 class VacinacaosController < ApplicationController
   before_action :set_vacinacao, only: %i[ show edit update destroy ]
   before_action :check_logado
+  before_action :check_usuario, only: [:show]
 
   # GET /vacinacaos or /vacinacaos.json
   def index
-    @vacinacaos = Vacinacao.all
+    @vacinacaos = current_user.vacinacaos
   end
 
   # GET /vacinacaos/1 or /vacinacaos/1.json
@@ -67,5 +68,11 @@ class VacinacaosController < ApplicationController
     # Only allow a list of trusted parameters through.
     def vacinacao_params
       params.require(:vacinacao).permit(:nome_vacina, :descricao_localizacao, :data, :horario)
+    end
+
+    def check_usuario
+      if @vacinacao.usuario_id != current_user.id
+        redirect_to root_path
+      end
     end
 end

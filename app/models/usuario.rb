@@ -10,7 +10,7 @@ class Usuario < ApplicationRecord
   validates :telefone, presence: true, numericality: { only_integer: true }, length: {is: 11}
 
   has_one :endereco
-  has_many :vacinacao
+  has_many :vacinacaos
 
   accepts_nested_attributes_for :endereco, allow_destroy: true
 
