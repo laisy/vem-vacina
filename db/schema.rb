@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_193150) do
+ActiveRecord::Schema.define(version: 2021_05_22_021600) do
 
   create_table "enderecos", force: :cascade do |t|
     t.integer "cep"

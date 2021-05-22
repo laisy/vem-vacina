@@ -1,5 +1,6 @@
 class Usuario < ApplicationRecord
-
+  has_secure_password
+  
   validates :cpf, presence: true, uniqueness: true,  numericality: { only_integer: true },  length: {is: 11}
   validates :nome, presence: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum: 50, too_long: "%{count} caracteres é o máximo permitido " }
   validates :email, presence: true, uniqueness: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum: 50, too_long: "%{count} caracteres é o máximo permitido " }
