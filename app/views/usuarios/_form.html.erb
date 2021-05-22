@@ -47,8 +47,33 @@
   </div>
 
   Endereço:
-  <%= form.select(:endereco_id, options_for_select(@enderecos)) %>
-  
+  <%= form.fields_for :endereco do |form_endereco| %>
+    <div class="field">
+      <%= form_endereco.label :cep %>
+      <%= form_endereco.number_field :cep %>
+    </div>
+
+    <div class="field">
+      <%= form_endereco.label :cidade %>
+      <%= form_endereco.text_field :cidade %>
+    </div>
+
+    <div class="field">
+      <%= form_endereco.label :bairro %>
+      <%= form_endereco.text_field :bairro %>
+    </div>
+
+    <div class="field">
+      <%= form_endereco.label :logradouro %>
+      <%= form_endereco.text_field :logradouro %>
+    </div>
+
+    <div class="field">
+      <%= form_endereco.label :complemento %>
+      <%= form_endereco.text_field :complemento %>
+    </div>
+    <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>

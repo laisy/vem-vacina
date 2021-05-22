@@ -1,5 +1,5 @@
 class Usuario < ApplicationRecord
-  has_secure_password
+  #has_secure_password
   
   validates :cpf, presence: true, uniqueness: true,  numericality: { only_integer: true },  length: {is: 11}
   validates :nome, presence: true, length: {minimum: 3, too_short: "%{count} caracteres é o minimo permitido ", maximum: 50, too_long: "%{count} caracteres é o máximo permitido " }
@@ -12,6 +12,8 @@ class Usuario < ApplicationRecord
   has_one :endereco
   has_many :vacinacao
 
+  accepts_nested_attributes_for :endereco, allow_destroy: true
+
   def autenticar(senha_view)
     if self.senha != senha_view
         return false
@@ -22,7 +24,7 @@ class Usuario < ApplicationRecord
 
   def validarDataNascimento
     if data_nascimento.present? && data_nascimento > Date.today
-      errors.add(:data_nascimento, "can't be in the past")
+      errors.add(:data_nascimento, "não pode ser no futuro")
     end
   end
   

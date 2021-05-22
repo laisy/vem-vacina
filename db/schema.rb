@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_021600) do
+ActiveRecord::Schema.define(version: 2021_05_09_193150) do
 
   create_table "enderecos", force: :cascade do |t|
     t.integer "cep"
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2021_05_22_021600) do
     t.string "bairro"
     t.string "logradouro"
     t.string "complemento"
+    t.integer "usuario_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["usuario_id"], name: "index_enderecos_on_usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -30,10 +32,8 @@ ActiveRecord::Schema.define(version: 2021_05_22_021600) do
     t.string "nome_mae"
     t.integer "telefone"
     t.string "email"
-    t.integer "endereco_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["endereco_id"], name: "index_usuarios_on_endereco_id"
   end
 
   create_table "vacinacaos", force: :cascade do |t|
@@ -47,6 +47,6 @@ ActiveRecord::Schema.define(version: 2021_05_22_021600) do
     t.index ["usuario_id"], name: "index_vacinacaos_on_usuario_id"
   end
 
-  add_foreign_key "usuarios", "enderecos"
+  add_foreign_key "enderecos", "usuarios"
   add_foreign_key "vacinacaos", "usuarios"
 end

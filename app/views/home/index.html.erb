@@ -4,7 +4,7 @@
   </br>
   <%= link_to "Sair", logout_path %>
 <% else %>
-  <%= link_to "Cadastrar-se", new_endereco_path %> or 
+  <%= link_to "Cadastrar-se", new_usuario_path %> or 
   <%= link_to "Logar-se", login_path %>
 <% end %>
 <p id="notice"><%= notice %></p>
@@ -18,10 +18,6 @@
   <%= link_to 'Nova Vacinação', new_vacinacao_path %>
   </br>
   <%= link_to 'Mostrar Vacinação', vacinacaos_path %>
-
-  <h5> ENDEREÇO </h5>
-  <%= link_to 'Editar Endereço', edit_endereco_path(@current_user.endereco_id) %>
-
 
 <% else %>
   Você precisa está logado para ter acesso
