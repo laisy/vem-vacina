@@ -9782,3 +9782,84 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/usuarios/2" for 127.0.0.1 at 2021-05-22 02:02:07 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/usuarios/2/edit" for 127.0.0.1 at 2021-05-22 02:02:11 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (81.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:65:in `set_usuario'
+  [1m[36mUsuario Load (4.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/show.html.erb within layouts/application
+  [1m[36mEndereco Load (137.7ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 2], ["LIMIT", 1]]
+  ↳ app/views/usuarios/show.html.erb:40
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 447.2ms | Allocations: 9027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1400ms (Views: 902.2ms | ActiveRecord: 223.2ms | Allocations: 23841)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:65:in `set_usuario'
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/edit.html.erb within layouts/application
+  [1m[36mEndereco Load (0.9ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 2], ["LIMIT", 1]]
+  ↳ app/views/usuarios/_form.html.erb:50
+  Rendered usuarios/_form.html.erb (Duration: 192.1ms | Allocations: 13191)
+  Rendered usuarios/edit.html.erb within layouts/application (Duration: 220.7ms | Allocations: 13541)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 286ms (Views: 259.1ms | ActiveRecord: 4.5ms | Allocations: 28174)
+
+
+Started PATCH "/usuarios/2" for 127.0.0.1 at 2021-05-22 02:02:33 -0300
+Processing by UsuariosController#update as HTML
+  Parameters: {"authenticity_token"=>"F5Uc1FnacQTK0AEhzv9kn29oCn9gZ3owoBrFnWSCWGubrtXDBe8tAlFMzVcYi32zyjv2fW8wSEs1/Kz2gkW2cg==", "usuario"=>{"nome"=>"David", "data_nascimento"=>"2019-05-21", "cpf"=>"78945612378", "senha"=>"123456", "nome_mae"=>"Josilene", "telefone"=>"87999999999", "email"=>"david@gmail.com", "endereco_attributes"=>{"cep"=>"55369214", "cidade"=>"Gravatá", "bairro"=>"Centro", "logradouro"=>"Rua alto do magano", "complemento"=>"", "id"=>"2"}}, "commit"=>"Update Usuario", "id"=>"2"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:65:in `set_usuario'
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+  [1m[36mEndereco Load (0.2ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 78945612378], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+  [1m[36mUsuario Exists? (19.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "david@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+  [1m[36mUsuario Update (33.6ms)[0m  [1m[33mUPDATE "usuarios" SET "data_nascimento" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["data_nascimento", "2019-05-21"], ["updated_at", "2021-05-22 05:02:34.086840"], ["id", 2]]
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+  [1m[35m (127.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:43:in `block in update'
+Redirected to http://127.0.0.1:3000/usuarios/2
+Completed 302 Found in 317ms (ActiveRecord: 182.2ms | Allocations: 10670)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2021-05-22 02:02:34 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:65:in `set_usuario'
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering usuarios/show.html.erb within layouts/application
+  [1m[36mEndereco Load (0.2ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 2], ["LIMIT", 1]]
+  ↳ app/views/usuarios/show.html.erb:40
+  Rendered usuarios/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 53.5ms | ActiveRecord: 1.3ms | Allocations: 6284)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-22 02:02:42 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 447)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 45.4ms | ActiveRecord: 0.5ms | Allocations: 5774)
+
+

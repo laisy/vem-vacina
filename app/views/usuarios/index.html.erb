@@ -28,9 +28,9 @@
         <td><%= usuario.telefone %></td>
         <td><%= usuario.email %></td>
         <td><%= usuario.endereco_id %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', usuario %></td>
+        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Apagar', usuario, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,5 +38,5 @@
 
 <br>
 
-<%= link_to 'New Usuario', new_usuario_path %>
-<%= link_to 'Back', root_path %>
+<%= link_to 'Novo Usuario', new_usuario_path %>
+<%= link_to 'Voltar', root_path %>
