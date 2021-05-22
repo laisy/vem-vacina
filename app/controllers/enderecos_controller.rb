@@ -26,7 +26,7 @@ class EnderecosController < ApplicationController
 
     respond_to do |format|
       if @endereco.save
-        format.html { redirect_to signup_path, notice: "Endereco was successfully created." }
+        format.html { redirect_to signup_path, notice: "Endereco criado com sucesso" }
         format.json { render :show, status: :created, location: @endereco }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class EnderecosController < ApplicationController
   def update
     respond_to do |format|
       if @endereco.update(endereco_params)
-        format.html { redirect_to @endereco, notice: "Endereco was successfully updated." }
+        format.html { redirect_to @endereco, notice: "Endereco atualizado com sucesso" }
         format.json { render :show, status: :ok, location: @endereco }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class EnderecosController < ApplicationController
   def destroy
     @endereco.destroy
     respond_to do |format|
-      format.html { redirect_to enderecos_url, notice: "Endereco was successfully destroyed." }
+      format.html { redirect_to enderecos_url, notice: "Endereco apagado com sucesso" }
       format.json { head :no_content }
     end
   end

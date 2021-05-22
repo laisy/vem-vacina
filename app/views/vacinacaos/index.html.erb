@@ -20,9 +20,9 @@
         <td><%= vacinacao.descricao_localizacao %></td>
         <td><%= vacinacao.data %></td>
         <td><%= vacinacao.horario %></td>
-        <td><%= link_to 'Show', vacinacao %></td>
-        <td><%= link_to 'Edit', edit_vacinacao_path(vacinacao) %></td>
-        <td><%= link_to 'Destroy', vacinacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', vacinacao %></td>
+        <td><%= link_to 'Editar', edit_vacinacao_path(vacinacao) %></td>
+        <td><%= link_to 'Deletar', vacinacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'New Vacinacao', new_vacinacao_path %>
-<%= link_to 'Back', root_path %>
+<%= link_to 'Nova Vacinacao', new_vacinacao_path %>
+<%= link_to 'Voltar', root_path %>
