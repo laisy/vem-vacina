@@ -5215,3 +5215,339 @@ Processing by VacinacaosController#create as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 422 Unprocessable Entity in 18ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4056)
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (60.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 04:48:46 -0300
+Processing by UsuariosController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 33.6ms | Allocations: 5550)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 64.1ms | Allocations: 6008)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 758ms (Views: 631.3ms | ActiveRecord: 2.5ms | Allocations: 41917)
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"patricia", "data_nascimento"=>"1999-05-21", "cpf"=>"14725836912", "senha"=>"123456", "nome_mae"=>"Juliana", "telefone"=>"87999643288", "email"=>"patricia@email.com", "endereco_attributes"=>{"cep"=>"55360000", "cidade"=>"Garanhuns", "bairro"=>"Magano", "logradouro"=>"Rua Alto do Magano", "complemento"=>""}}, "commit"=>"salvar"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (10.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "patricia@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (31.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "patricia"], ["data_nascimento", "1999-05-21"], ["cpf", 14725836912], ["senha", "123456"], ["nome_mae", "Juliana"], ["telefone", 87999643288], ["email", "patricia@email.com"], ["created_at", "2021-05-23 07:48:47.456389"], ["updated_at", "2021-05-23 07:48:47.456389"]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Garanhuns"], ["bairro", "Magano"], ["logradouro", "Rua Alto do Magano"], ["complemento", ""], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:47.498620"], ["updated_at", "2021-05-23 07:48:47.498620"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 86ms (ActiveRecord: 42.9ms | Allocations: 3213)
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 602)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 397)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 2919)
+Started GET "/login" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 2897)
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"cpf"=>"14725836912", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 598)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 2150)
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 46.5ms | Allocations: 1652)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 60.7ms | Allocations: 1976)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 106ms (Views: 67.3ms | ActiveRecord: 1.3ms | Allocations: 10862)
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"vacinacao"=>{"nome_vacina"=>"CoronaVac", "descricao_localizacao"=>"Posto de saúde II", "data"=>"2021-07-21", "horario"=>"2021-05-23 14:30:00 -0300"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVacinacao Create (1.3ms)[0m  [1m[32mINSERT INTO "vacinacaos" ("nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome_vacina", "CoronaVac"], ["descricao_localizacao", "Posto de saúde II"], ["data", "2021-07-21"], ["horario", "2000-01-01 17:30:00"], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:47.744636"], ["updated_at", "2021-05-23 07:48:47.744636"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/vacinacaos/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms | Allocations: 1795)
+Started GET "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.4ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 26.7ms | Allocations: 343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.6ms | Allocations: 2780)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 12.4ms | Allocations: 2497)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 4557)
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"patricia", "data_nascimento"=>"1999-05-21", "cpf"=>"14725836912", "senha"=>"123456", "nome_mae"=>"Juliana", "telefone"=>"87999643288", "email"=>"patricia@email.com", "endereco_attributes"=>{"cep"=>"55360000", "cidade"=>"Garanhuns", "bairro"=>"Magano", "logradouro"=>"Rua Alto do Magano", "complemento"=>""}}, "commit"=>"salvar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "patricia@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "patricia"], ["data_nascimento", "1999-05-21"], ["cpf", 14725836912], ["senha", "123456"], ["nome_mae", "Juliana"], ["telefone", 87999643288], ["email", "patricia@email.com"], ["created_at", "2021-05-23 07:48:47.923533"], ["updated_at", "2021-05-23 07:48:47.923533"]]
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Garanhuns"], ["bairro", "Magano"], ["logradouro", "Rua Alto do Magano"], ["complemento", ""], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:47.926547"], ["updated_at", "2021-05-23 07:48:47.926547"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms | Allocations: 2337)
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 433)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1979)
+Started GET "/login" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2097)
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"cpf"=>"14725836912", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 420)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 2144)
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:48:47 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 3.1ms | Allocations: 933)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 3022)
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"vacinacao"=>{"nome_vacina"=>"CoronaVac", "descricao_localizacao"=>"Posto de saúde II", "data"=>"2021-07-21", "horario"=>"2021-05-23 14:30:00 -0300"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVacinacao Create (0.3ms)[0m  [1m[32mINSERT INTO "vacinacaos" ("nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome_vacina", "CoronaVac"], ["descricao_localizacao", "Posto de saúde II"], ["data", "2021-07-21"], ["horario", "2000-01-01 17:30:00"], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:48.012068"], ["updated_at", "2021-05-23 07:48:48.012068"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/vacinacaos/1
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms | Allocations: 1391)
+Started GET "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2269)
+Started GET "/vacinacaos/1/edit" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/edit.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 4.3ms | Allocations: 1026)
+  Rendered vacinacaos/edit.html.erb within layouts/application (Duration: 21.6ms | Allocations: 1264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.3ms | Allocations: 3521)
+Started PATCH "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#update as HTML
+  Parameters: {"vacinacao"=>{"nome_vacina"=>"CoronaVac segunda dose", "descricao_localizacao"=>"Posto de saúde II", "data"=>"2021-07-21", "horario"=>"2021-05-23 14:30:00 -0300"}, "commit"=>"salvar", "id"=>"1"}
+  [1m[36mVacinacao Load (0.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVacinacao Update (4.1ms)[0m  [1m[33mUPDATE "vacinacaos" SET "nome_vacina" = ?, "updated_at" = ? WHERE "vacinacaos"."id" = ?[0m  [["nome_vacina", "CoronaVac segunda dose"], ["updated_at", "2021-05-23 07:48:48.088545"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/vacinacaos/1
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms | Allocations: 1525)
+Started GET "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.5ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 1.2ms | Allocations: 2260)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 6.8ms | Allocations: 2497)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 4557)
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"patricia", "data_nascimento"=>"1999-05-21", "cpf"=>"14725836912", "senha"=>"123456", "nome_mae"=>"Juliana", "telefone"=>"87999643288", "email"=>"patricia@email.com", "endereco_attributes"=>{"cep"=>"55360000", "cidade"=>"Garanhuns", "bairro"=>"Magano", "logradouro"=>"Rua Alto do Magano", "complemento"=>""}}, "commit"=>"salvar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "patricia@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (7.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "patricia"], ["data_nascimento", "1999-05-21"], ["cpf", 14725836912], ["senha", "123456"], ["nome_mae", "Juliana"], ["telefone", 87999643288], ["email", "patricia@email.com"], ["created_at", "2021-05-23 07:48:48.189191"], ["updated_at", "2021-05-23 07:48:48.189191"]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Garanhuns"], ["bairro", "Magano"], ["logradouro", "Rua Alto do Magano"], ["complemento", ""], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:48.198527"], ["updated_at", "2021-05-23 07:48:48.198527"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 20ms (ActiveRecord: 8.6ms | Allocations: 2337)
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 421)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1981)
+Started GET "/login" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2109)
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"cpf"=>"14725836912", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 424)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 2140)
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 2.9ms | Allocations: 931)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 3025)
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"vacinacao"=>{"nome_vacina"=>"", "descricao_localizacao"=>"Posto de saúde II", "data"=>"2021-07-21", "horario"=>"2021-05-23 14:30:00 -0300"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 3.7ms | Allocations: 1279)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1352)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 14ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4607)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 7.9ms | Allocations: 2490)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 4546)
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"patricia", "data_nascimento"=>"1999-05-21", "cpf"=>"14725836912", "senha"=>"123456", "nome_mae"=>"Juliana", "telefone"=>"87999643288", "email"=>"patricia@email.com", "endereco_attributes"=>{"cep"=>"55360000", "cidade"=>"Garanhuns", "bairro"=>"Magano", "logradouro"=>"Rua Alto do Magano", "complemento"=>""}}, "commit"=>"salvar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "patricia@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "patricia"], ["data_nascimento", "1999-05-21"], ["cpf", 14725836912], ["senha", "123456"], ["nome_mae", "Juliana"], ["telefone", 87999643288], ["email", "patricia@email.com"], ["created_at", "2021-05-23 07:48:48.412248"], ["updated_at", "2021-05-23 07:48:48.412248"]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Garanhuns"], ["bairro", "Magano"], ["logradouro", "Rua Alto do Magano"], ["complemento", ""], ["usuario_id", 1], ["created_at", "2021-05-23 07:48:48.414261"], ["updated_at", "2021-05-23 07:48:48.414261"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms | Allocations: 2337)
+Started GET "/usuarios/1" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 431)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1982)
+Started GET "/login" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2094)
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"cpf"=>"14725836912", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 14725836912], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 424)
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 2131)
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 2.8ms | Allocations: 930)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 3014)
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:48:48 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"vacinacao"=>{"nome_vacina"=>"a", "descricao_localizacao"=>"Posto de saúde II", "data"=>"2021-07-21", "horario"=>"2021-05-23 14:30:00 -0300"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 3.6ms | Allocations: 1117)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 14ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4042)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m

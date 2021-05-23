@@ -33,4 +33,3 @@ Feature: vacinacao
     When eu crio uma vacinacao com o nome vacina 'a' e a descricao de localizacao 'Posto de saúde II' e a Data '2021-07-21' e horario '14:30:00'
     And eu clico em criar uma vacinacao 
     Then eu vejo uma mensagem de erro
-    

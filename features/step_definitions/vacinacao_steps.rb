@@ -33,3 +33,19 @@ end
 Then("eu vejo que uma vacina com o nome {string} foi criada") do |nome|
   expect(page).to have_content(nome)
 end 
+
+Given('eu estou na pagina de edicao da vacinacao de nome {string}') do |nome|
+  click_link 'Editar'
+end
+When('eu edito uma vacinacao com o nome vacina {string} e a descricao de localizacao {string} e a Data {string} e horario {string}') do |nome_vacina, descricao_localizacao, data, horario|
+  fill_in 'vacinacao[nome_vacina]', :with => nome_vacina
+  fill_in 'vacinacao[descricao_localizacao]', :with => descricao_localizacao
+  fill_in 'vacinacao[data]', :with => data.to_date
+  fill_in 'vacinacao[horario]', :with => horario.to_time
+end
+When('eu clico em editar uma vacinacao') do
+  click_button 'salvar'
+end
+Then('eu vejo que uma vacina com o nome {string} foi atualizada') do |nome|
+  expect(page).to have_content(nome)
+end 
