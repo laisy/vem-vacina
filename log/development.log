@@ -10834,3 +10834,727 @@ Processing by VacinacaosController#index as HTML
 Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 1.9ms | Allocations: 6843)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (15.9ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEndereco Load (30.2ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678914], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamaria@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678925], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamaria@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (37.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678925], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamaria@email.com"], ["created_at", "2021-05-23 01:25:44.434755"], ["updated_at", "2021-05-23 01:25:44.434755"]]
+  [1m[35m (110.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678925], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamaria@email.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (82.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEnderecos (20210507012529)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE IF NOT EXISTS "enderecos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" integer, "cidade" varchar, "bairro" varchar, "logradouro" varchar, "complemento" varchar, "usuario_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e0e4fe0e66"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_enderecos_on_usuario_id" ON "enderecos" ("usuario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (7.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210507012529"]]
+  [1m[35m (57.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20210507013013)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "data_nascimento" date, "cpf" integer, "senha" varchar, "nome_mae" varchar, "telefone" integer, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210507013013"]]
+  [1m[35m (67.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVacinacaos (20210509193150)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "vacinacaos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_vacina" varchar, "descricao_localizacao" text, "data" date, "horario" time, "usuario_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b464d1025a"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_vacinacaos_on_usuario_id" ON "vacinacaos" ("usuario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210509193150"]]
+  [1m[35m (64.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-23 01:27:23.346181"], ["updated_at", "2021-05-23 01:27:23.346181"]]
+  [1m[35m (47.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678925], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamaria@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (79.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEnderecos (20210507012529)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE IF NOT EXISTS "enderecos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" integer, "cidade" varchar, "bairro" varchar, "logradouro" varchar, "complemento" varchar, "usuario_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e0e4fe0e66"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_enderecos_on_usuario_id" ON "enderecos" ("usuario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210507012529"]]
+  [1m[35m (108.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsuarios (20210507013013)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "data_nascimento" date, "cpf" integer, "senha" varchar, "nome_mae" varchar, "telefone" integer, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210507013013"]]
+  [1m[35m (56.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVacinacaos (20210509193150)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "vacinacaos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_vacina" varchar, "descricao_localizacao" text, "data" date, "horario" time, "usuario_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b464d1025a"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_vacinacaos_on_usuario_id" ON "vacinacaos" ("usuario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210509193150"]]
+  [1m[35m (56.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-23 01:33:53.706834"], ["updated_at", "2021-05-23 01:33:53.706834"]]
+  [1m[35m (48.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678925], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamaria@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (2.7ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678925], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamaria@email.com"], ["created_at", "2021-05-23 01:35:00.259995"], ["updated_at", "2021-05-23 01:35:00.259995"]]
+  [1m[36mEndereco Create (2.0ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 1], ["created_at", "2021-05-23 01:35:00.278242"], ["updated_at", "2021-05-23 01:35:00.278242"]]
+  [1m[35m (87.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUsuario Load (27.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEndereco Load (1.0ms)[0m  [1m[34mSELECT "enderecos".* FROM "enderecos" WHERE "enderecos"."usuario_id" = ? LIMIT ?[0m  [["usuario_id", 1], ["LIMIT", 1]]
+  [1m[36mUsuario Load (31.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."nome" = ? LIMIT ?[0m  [["nome", "Ana Maria"], ["LIMIT", 1]]
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mVacinacao Load (1.1ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" ORDER BY "vacinacaos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-05-22 23:49:47 -0300
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 66.5ms | Allocations: 545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 592ms (Views: 543.6ms | ActiveRecord: 0.0ms | Allocations: 9486)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-22 23:49:53 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 77.3ms | Allocations: 537)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 108.7ms | ActiveRecord: 0.0ms | Allocations: 5316)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-22 23:50:15 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 122.0ms | Allocations: 5822)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 151.4ms | Allocations: 6175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 283ms (Views: 187.8ms | ActiveRecord: 2.2ms | Allocations: 30272)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-22 23:55:23 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"jVZH9ALi4lHlcXSOHGm5EaDQfa5o4oqrXeuNahxo88r/UZlwQs6ELnFuwZW8enCjfawQjxsCh5rhg1pJ6jpbcA==", "usuario"=>{"nome"=>"", "data_nascimento"=>"", "cpf"=>"", "senha"=>"", "nome_mae"=>"", "telefone"=>"", "email"=>"", "endereco_attributes"=>{"cep"=>"", "cidade"=>"", "bairro"=>"", "logradouro"=>"", "complemento"=>""}}, "commit"=>"Create Usuario"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 14.8ms | Allocations: 6052)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 6144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 128ms (Views: 25.7ms | ActiveRecord: 1.0ms | Allocations: 24051)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-22 23:55:36 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 4539)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-22 23:56:02 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4539)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-22 23:56:03 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 17.4ms | Allocations: 2699)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 2790)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 7249)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-22 23:56:40 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4529)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-22 23:56:50 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jeZi6QoNzftQnyOJ5X9CvSXmeuHg0AND8j3TBRbczJwoB9ae4sl+/ak5dSoRT5gzOiy96YLypa5DYsNs6kBsVA==", "cpf"=>"12345678910", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678910], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 5322)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-22 23:56:53 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qXBoD7/smAG0+VIO95HM++EGXpAYi/obZ3G6Kv6uLhB0EC+Q86SAjQB+hDDJJPjsN1Uk9eiOYewxEvXkxS+ypQ==", "cpf"=>"12345678914", "senha"=>"1234569", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678914], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms | Allocations: 5084)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-22 23:56:56 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"neRb1imeJcvl5WuZx7BeYfqgAhasAPx83seT6HktOcVAhBxJZdY9R1Fivaf5BWp2LPN4c1wFZ4uIpNwmQqylcA==", "cpf"=>"12345678999", "senha"=>"123456", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678999], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 37.8ms | ActiveRecord: 0.3ms | Allocations: 5098)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-22 23:57:03 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 8.3ms | Allocations: 2699)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2790)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 7233)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2021-05-22 23:58:15 -0300
+Processing by UsuariosController#create as HTML
+  Parameters: {"authenticity_token"=>"dJRTH5sfaH62KJGMYzVrEF5gPnVEwyFtVaYNDYkNLFoGk42b2zMOASI3JJfDJqKigxxTVDcjLFzpztouf1+E4A==", "usuario"=>{"nome"=>"joao", "data_nascimento"=>"2000-02-15", "cpf"=>"36925814712", "senha"=>"147258", "nome_mae"=>"Ana", "telefone"=>"87996226468", "email"=>"joao@email.com", "endereco_attributes"=>{"cep"=>"55360001", "cidade"=>"Garanhuns", "bairro"=>"Magano", "logradouro"=>"Rua alto do magano", "complemento"=>""}}, "commit"=>"Create Usuario"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 36925814712], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mUsuario Create (55.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "joao"], ["data_nascimento", "2000-02-15"], ["cpf", 36925814712], ["senha", "147258"], ["nome_mae", "Ana"], ["telefone", 87996226468], ["email", "joao@email.com"], ["created_at", "2021-05-23 02:58:15.119981"], ["updated_at", "2021-05-23 02:58:15.119981"]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360001], ["cidade", "Garanhuns"], ["bairro", "Magano"], ["logradouro", "Rua alto do magano"], ["complemento", ""], ["usuario_id", 2], ["created_at", "2021-05-23 02:58:15.360454"], ["updated_at", "2021-05-23 02:58:15.360454"]]
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+  [1m[35m (187.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/usuarios_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/usuarios/2
+Completed 302 Found in 517ms (ActiveRecord: 243.8ms | Allocations: 10022)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2021-05-22 23:58:15 -0300
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:65:in `set_usuario'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :check_logado rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms | Allocations: 1044)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-22 23:58:15 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 4365)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-22 23:58:17 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4533)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-22 23:58:23 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3sfW74BrDoeaPR40UtM6TTdrZRBuTm+vn9XD5Qb/K3l7JmKYaK+9gWObSJem4+DDKKGiGAxsyUIuitOM+mOLsQ==", "cpf"=>"36925814712", "senha"=>"147258", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 36925814712], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 942)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-22 23:58:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 4963)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-22 23:59:10 -0300
+Processing by VacinacaosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/index.html.erb within layouts/application
+  [1m[36mVacinacao Load (1.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."usuario_id" = ?[0m  [["usuario_id", 2]]
+  ↳ app/views/vacinacaos/index.html.erb:17
+  Rendered vacinacaos/index.html.erb within layouts/application (Duration: 51.4ms | Allocations: 1804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 82.1ms | ActiveRecord: 2.7ms | Allocations: 8937)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-22 23:59:54 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 145.2ms | Allocations: 6612)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 155.2ms | Allocations: 6954)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 240ms (Views: 187.0ms | ActiveRecord: 2.3ms | Allocations: 16819)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 00:06:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (1.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 78.0ms | Allocations: 2500)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 78.7ms | Allocations: 2591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 294ms (Views: 256.6ms | ActiveRecord: 1.4ms | Allocations: 7448)
+
+
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 00:11:53 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VacinacaosController#create as HTML
+  Parameters: {"authenticity_token"=>"8mfbroWuLKVJ7dBSP+2UH4Z0o/y/1RTOKliEBt0mO4U1i5FEGXLCOzBHF53pMPpwoNaxFktyxghmdyhd9jTjDQ==", "vacinacao"=>{"nome_vacina"=>"Covid-19", "descricao_localizacao"=>"Hospital central", "data"=>"2021-05-26", "horario(1i)"=>"2021", "horario(2i)"=>"5", "horario(3i)"=>"23", "horario(4i)"=>"03", "horario(5i)"=>"06"}, "commit"=>"Create Vacinacao"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[36mVacinacao Create (26.6ms)[0m  [1m[32mINSERT INTO "vacinacaos" ("nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome_vacina", "Covid-19"], ["descricao_localizacao", "Hospital central"], ["data", "2021-05-26"], ["horario", "2000-01-01 03:06:00"], ["usuario_id", 2], ["created_at", "2021-05-23 03:11:53.687870"], ["updated_at", "2021-05-23 03:11:53.687870"]]
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[35m (180.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/vacinacaos/1
+Completed 302 Found in 335ms (ActiveRecord: 207.8ms | Allocations: 7997)
+
+
+Started GET "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 00:11:54 -0300
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:65:in `set_vacinacao'
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 117.8ms | Allocations: 345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 659ms (Views: 652.8ms | ActiveRecord: 0.4ms | Allocations: 6045)
+
+
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mVacinacao Load (10.9ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" ORDER BY "vacinacaos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/vacinacaos/1" for 127.0.0.1 at 2021-05-23 03:22:01 -0300
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (26.3ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:65:in `set_vacinacao'
+  [1m[36mUsuario Load (40.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 72.9ms | Allocations: 501)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2254ms (Views: 1655.8ms | ActiveRecord: 71.6ms | Allocations: 27589)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:22:52 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (79.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 161.5ms | Allocations: 521)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 598ms (Views: 423.3ms | ActiveRecord: 79.4ms | Allocations: 5903)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-05-23 03:23:08 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:23:08 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 4367)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-23 03:23:10 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 61.6ms | Allocations: 536)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 5346)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 03:23:23 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"y3OICkNhsMszXJivhf0SjEb9WUOC/BRddskT+aPn9s9ukjx9q6UDzcr6zgxxzcgCWTeeS+DesrDHlgOQX3tWBw==", "cpf"=>"36925814712", "senha"=>"147258", "commit"=>"Login"}
+  [1m[36mUsuario Load (10.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 36925814712], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 17ms (ActiveRecord: 10.2ms | Allocations: 1172)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:23:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4973)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-05-23 03:23:27 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:23:27 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4366)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-23 03:23:29 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 4529)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-05-23 03:23:34 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:23:34 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 4358)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 03:23:36 -0300
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 141.9ms | Allocations: 5744)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 166.9ms | Allocations: 6101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 311ms (Views: 189.8ms | ActiveRecord: 0.7ms | Allocations: 20309)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2021-05-23 03:34:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (Duration: 14.7ms | Allocations: 3255)
+  Rendered usuarios/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 3599)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 309ms (Views: 151.4ms | ActiveRecord: 0.0ms | Allocations: 8984)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:48:33 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 377)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms | Allocations: 5539)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-05-23 03:48:35 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 510)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 5329)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2021-05-23 03:48:39 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"fo/lLch43WRUtdaIp0NBpoKMY4kRU7TFBRWxzkvYCaXbblFaILxuYq0TgCtTc5sonUakgXNxEii0SqGnt0SpbQ==", "cpf"=>"36925814712", "senha"=>"147258", "commit"=>"Login"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 36925814712], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 968)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:48:39 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 4994)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 03:48:41 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 24.2ms | Allocations: 4936)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 5284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.2ms | Allocations: 10592)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:56:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (1.6ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 286ms (Views: 282.2ms | ActiveRecord: 1.6ms | Allocations: 4980)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 03:56:31 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 1.9ms | Allocations: 988)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.1ms | Allocations: 5908)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:56:33 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 4929)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-23 03:56:34 -0300
+Processing by VacinacaosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/index.html.erb within layouts/application
+  [1m[36mVacinacao Load (0.4ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."usuario_id" = ?[0m  [["usuario_id", 2]]
+  ↳ app/views/vacinacaos/index.html.erb:17
+  Rendered vacinacaos/index.html.erb within layouts/application (Duration: 85.2ms | Allocations: 2039)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1550ms (Views: 95.0ms | ActiveRecord: 0.6ms | Allocations: 10581)
+
+
+Started GET "/vacinacaos/1/edit" for 127.0.0.1 at 2021-05-23 03:56:38 -0300
+Processing by VacinacaosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVacinacao Load (0.3ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:65:in `set_vacinacao'
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/edit.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 2.5ms | Allocations: 1083)
+  Rendered vacinacaos/edit.html.erb within layouts/application (Duration: 46.4ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 0.7ms | Allocations: 6880)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 03:57:44 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.2ms | Allocations: 4956)
+
+
+Started GET "/vacinacaos" for 127.0.0.1 at 2021-05-23 03:57:46 -0300
+Processing by VacinacaosController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/index.html.erb within layouts/application
+  [1m[36mVacinacao Load (0.6ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."usuario_id" = ?[0m  [["usuario_id", 2]]
+  ↳ app/views/vacinacaos/index.html.erb:17
+  Rendered vacinacaos/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 1.1ms | Allocations: 5814)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:01:50 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 440)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.1ms | Allocations: 6170)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:02:00 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 16.9ms | Allocations: 1369)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 47.3ms | Allocations: 1713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 239ms (Views: 235.6ms | ActiveRecord: 0.2ms | Allocations: 7126)
+
+
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:02:21 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"authenticity_token"=>"V+E8g8eT3cnoMpBVeQyZa3cwvA7d4gH1kmSg4HSHSfuQDXZpW08zV5GYV5qv0fcEUZKu5ClF0zPeSwy7X5WRcw==", "vacinacao"=>{"nome_vacina"=>"aaaaaaaaaa", "descricao_localizacao"=>"aaaaaaaaaaaaaaaaaaaaaaaaa", "data"=>"2021-05-27", "horario"=>"13:50"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[36mVacinacao Create (352.8ms)[0m  [1m[32mINSERT INTO "vacinacaos" ("nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome_vacina", "aaaaaaaaaa"], ["descricao_localizacao", "aaaaaaaaaaaaaaaaaaaaaaaaa"], ["data", "2021-05-27"], ["horario", "2000-01-01 13:50:00"], ["usuario_id", 2], ["created_at", "2021-05-23 07:02:22.112870"], ["updated_at", "2021-05-23 07:02:22.112870"]]
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  [1m[35m (43.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/vacinacaos/2
+Completed 302 Found in 863ms (ActiveRecord: 396.8ms | Allocations: 6294)
+
+
+Started GET "/vacinacaos/2" for 127.0.0.1 at 2021-05-23 04:02:22 -0300
+Processing by VacinacaosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVacinacao Load (0.2ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:65:in `set_vacinacao'
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/show.html.erb within layouts/application
+  Rendered vacinacaos/show.html.erb within layouts/application (Duration: 24.2ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 31.6ms | ActiveRecord: 1.1ms | Allocations: 6267)
+
+
+Started GET "/vacinacaos/2/edit" for 127.0.0.1 at 2021-05-23 04:09:29 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VacinacaosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVacinacao Load (0.6ms)[0m  [1m[34mSELECT "vacinacaos".* FROM "vacinacaos" WHERE "vacinacaos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:65:in `set_vacinacao'
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/edit.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 8.0ms | Allocations: 1083)
+  Rendered vacinacaos/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 261ms (Views: 246.9ms | ActiveRecord: 1.4ms | Allocations: 6905)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-23 04:14:02 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 123.0ms | ActiveRecord: 0.7ms | Allocations: 4965)
+
+
+Started GET "/vacinacaos/new" for 127.0.0.1 at 2021-05-23 04:14:06 -0300
+Processing by VacinacaosController#new as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 8.9ms | Allocations: 989)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 48.0ms | ActiveRecord: 0.5ms | Allocations: 5908)
+
+
+Started POST "/vacinacaos" for 127.0.0.1 at 2021-05-23 04:14:29 -0300
+Processing by VacinacaosController#create as HTML
+  Parameters: {"authenticity_token"=>"MOFdml87KT/B5h9UR2gtkc9pGYFJmsEGb/VoKecDu3P3DRdww+fHobhM2JuRtUP+6csLa709E8Aj2sRyzBFj+w==", "vacinacao"=>{"nome_vacina"=>"", "descricao_localizacao"=>"aaaaaaaaaa", "data"=>"2021-05-26", "horario"=>"13:59"}, "commit"=>"salvar"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mCACHE Usuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vacinacaos_controller.rb:30:in `block in create'
+  Rendering vacinacaos/new.html.erb within layouts/application
+  Rendered vacinacaos/_form.html.erb (Duration: 6.2ms | Allocations: 1337)
+  Rendered vacinacaos/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1428)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 422 Unprocessable Entity in 38ms (Views: 29.2ms | ActiveRecord: 0.3ms | Allocations: 8532)
+
+
