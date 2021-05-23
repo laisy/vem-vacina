@@ -49,3 +49,6 @@ end
 Then('eu vejo que uma vacina com o nome {string} foi atualizada') do |nome|
   expect(page).to have_content(nome)
 end 
+Then('eu vejo uma mensagem de erro') do
+  expect(page).to have_content('error')
+end 
