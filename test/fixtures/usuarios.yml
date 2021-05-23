@@ -8,7 +8,7 @@ one:
   nome_mae: MyString
   telefone: 1
   email: MyString
-  endereco: one
+  # endereco: one
 
 two:
   nome: MyString
@@ -18,4 +18,4 @@ two:
   nome_mae: MyString
   telefone: 1
   email: MyString
-  endereco: two
+  # endereco: two
