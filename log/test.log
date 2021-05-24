@@ -5887,3 +5887,1108 @@ Processing by VacinacaosController#create as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 422 Unprocessable Entity in 14ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4044)
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (361.9ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (378.4ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:55:51.201506', '2021-05-23 22:55:51.201506');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:55:51.201506', '2021-05-23 22:55:51.201506');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 22:55:51.204405', '2021-05-23 22:55:51.204405');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 22:55:51.204405', '2021-05-23 22:55:51.204405');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 22:55:51.206972', '2021-05-23 22:55:51.206972');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 22:55:51.206972', '2021-05-23 22:55:51.206972')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:55:51.212091', '2021-05-23 22:55:51.212091');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:55:51.212091', '2021-05-23 22:55:51.212091');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 22:55:51.215724', '2021-05-23 22:55:51.215724');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 22:55:51.215724', '2021-05-23 22:55:51.215724');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 22:55:51.217528', '2021-05-23 22:55:51.217528');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 22:55:51.217528', '2021-05-23 22:55:51.217528')[0m
+  [1m[35m (83.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[35m (96.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:55:51.458405"], ["updated_at", "2021-05-23 22:55:51.458405"]]
+  [1m[36mEndereco Create (0.8ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:55:51.466108"], ["updated_at", "2021-05-23 22:55:51.466108"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (0.6ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 22:55:51.484748"], ["id", 980190963]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Create (0.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:55:51.486011"], ["updated_at", "2021-05-23 22:55:51.486011"]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEndereco Create (0.6ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:55:51.495150"], ["updated_at", "2021-05-23 22:55:51.495150"]]
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:55:51.512697"], ["updated_at", "2021-05-23 22:55:51.512697"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mEndereco Create (0.7ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:55:51.518208"], ["updated_at", "2021-05-23 22:55:51.518208"]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (425.1ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (453.7ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:58:14.458280', '2021-05-23 22:58:14.458280');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:58:14.458280', '2021-05-23 22:58:14.458280');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 22:58:14.468474', '2021-05-23 22:58:14.468474');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 22:58:14.468474', '2021-05-23 22:58:14.468474');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 22:58:14.473107', '2021-05-23 22:58:14.473107');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 22:58:14.473107', '2021-05-23 22:58:14.473107')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.9ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:58:14.450467', '2021-05-23 22:58:14.450467');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 22:58:14.450467', '2021-05-23 22:58:14.450467');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 22:58:14.468445', '2021-05-23 22:58:14.468445');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 22:58:14.468445', '2021-05-23 22:58:14.468445');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 22:58:14.472911', '2021-05-23 22:58:14.472911');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 22:58:14.472911', '2021-05-23 22:58:14.472911')[0m
+  [1m[35m (171.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[35m (188.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:58:14.737160"], ["updated_at", "2021-05-23 22:58:14.737160"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:58:14.749976"], ["updated_at", "2021-05-23 22:58:14.749976"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.5ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:58:14.813249"], ["updated_at", "2021-05-23 22:58:14.813249"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEndereco Create (0.6ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:58:14.819436"], ["updated_at", "2021-05-23 22:58:14.819436"]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.9ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:58:14.847845"], ["updated_at", "2021-05-23 22:58:14.847845"]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mEndereco Create (0.7ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:58:14.852437"], ["updated_at", "2021-05-23 22:58:14.852437"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Create (9.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 22:58:14.889359"], ["updated_at", "2021-05-23 22:58:14.889359"]]
+  [1m[36mEndereco Create (1.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 22:58:14.900900"], ["updated_at", "2021-05-23 22:58:14.900900"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 22:58:14.912430"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (259.0ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (295.1ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.3ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:19.400277', '2021-05-23 23:00:19.400277');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:19.400277', '2021-05-23 23:00:19.400277');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:19.409210', '2021-05-23 23:00:19.409210');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:19.409210', '2021-05-23 23:00:19.409210');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:19.415497', '2021-05-23 23:00:19.415497');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:19.415497', '2021-05-23 23:00:19.415497')[0m
+  [1m[35m (44.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:19.490674', '2021-05-23 23:00:19.490674');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:19.490674', '2021-05-23 23:00:19.490674');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:19.502882', '2021-05-23 23:00:19.502882');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:19.502882', '2021-05-23 23:00:19.502882');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:19.513299', '2021-05-23 23:00:19.513299');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:19.513299', '2021-05-23 23:00:19.513299')[0m
+  [1m[35m (48.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (2.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.635294"], ["updated_at", "2021-05-23 23:00:19.635294"]]
+  [1m[36mEndereco Create (0.6ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:19.642337"], ["updated_at", "2021-05-23 23:00:19.642337"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.681714"], ["updated_at", "2021-05-23 23:00:19.681714"]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:19.684292"], ["updated_at", "2021-05-23 23:00:19.684292"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 23:00:19.695044"], ["id", 980190963]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_referencia_pra_usuario_
+-------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.705146"], ["updated_at", "2021-05-23 23:00:19.705146"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:19.710059"], ["updated_at", "2021-05-23 23:00:19.710059"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.716178"], ["updated_at", "2021-05-23 23:00:19.716178"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.718577"], ["updated_at", "2021-05-23 23:00:19.718577"]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.5ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:19.723778"], ["updated_at", "2021-05-23 23:00:19.723778"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EnderecoTest: test_criando_endereco_sem_cep
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:19.721612"], ["updated_at", "2021-05-23 23:00:19.721612"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Create (0.6ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:19.736561"], ["updated_at", "2021-05-23 23:00:19.736561"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.4ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (378.9ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (391.7ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.8ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.5ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:38.105822', '2021-05-23 23:00:38.105822');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:38.105822', '2021-05-23 23:00:38.105822');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:38.116270', '2021-05-23 23:00:38.116270');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:38.116270', '2021-05-23 23:00:38.116270');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:38.123713', '2021-05-23 23:00:38.123713');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:38.123713', '2021-05-23 23:00:38.123713')[0m
+  [1m[35m (41.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.0ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:38.168643', '2021-05-23 23:00:38.168643');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:38.168643', '2021-05-23 23:00:38.168643');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:38.187568', '2021-05-23 23:00:38.187568');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:38.187568', '2021-05-23 23:00:38.187568');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:38.194348', '2021-05-23 23:00:38.194348');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:38.194348', '2021-05-23 23:00:38.194348')[0m
+  [1m[35m (41.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.3ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.299340"], ["updated_at", "2021-05-23 23:00:38.299340"]]
+  [1m[36mEndereco Create (0.2ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:38.301311"], ["updated_at", "2021-05-23 23:00:38.301311"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (0.2ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 23:00:38.305966"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.309790"], ["updated_at", "2021-05-23 23:00:38.309790"]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:38.312405"], ["updated_at", "2021-05-23 23:00:38.312405"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.330684"], ["updated_at", "2021-05-23 23:00:38.330684"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:38.340921"], ["updated_at", "2021-05-23 23:00:38.340921"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.347882"], ["updated_at", "2021-05-23 23:00:38.347882"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EnderecoTest: test_criando_endereco_sem_cep
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.5ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:38.355285"], ["updated_at", "2021-05-23 23:00:38.355285"]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.355171"], ["updated_at", "2021-05-23 23:00:38.355171"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+-------------------------------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_referencia_pra_usuario_
+-------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:38.367246"], ["updated_at", "2021-05-23 23:00:38.367246"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (293.7ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (314.2ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.4ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:59.352264', '2021-05-23 23:00:59.352264');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:59.352264', '2021-05-23 23:00:59.352264');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:59.359886', '2021-05-23 23:00:59.359886');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:59.359886', '2021-05-23 23:00:59.359886');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:59.366444', '2021-05-23 23:00:59.366444');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:59.366444', '2021-05-23 23:00:59.366444')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:59.377592', '2021-05-23 23:00:59.377592');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:00:59.377592', '2021-05-23 23:00:59.377592');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:00:59.386821', '2021-05-23 23:00:59.386821');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:00:59.386821', '2021-05-23 23:00:59.386821');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:00:59.392983', '2021-05-23 23:00:59.392983');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:00:59.392983', '2021-05-23 23:00:59.392983')[0m
+  [1m[35m (93.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[35m (87.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EnderecoTest: test_criando_endereco_sem_cep
+-------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.539272"], ["updated_at", "2021-05-23 23:00:59.539272"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.572193"], ["updated_at", "2021-05-23 23:00:59.572193"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:59.595393"], ["updated_at", "2021-05-23 23:00:59.595393"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_referencia_pra_usuario
+------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.6ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.603354"], ["updated_at", "2021-05-23 23:00:59.603354"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.623749"], ["updated_at", "2021-05-23 23:00:59.623749"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:59.629433"], ["updated_at", "2021-05-23 23:00:59.629433"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.638438"], ["updated_at", "2021-05-23 23:00:59.638438"]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.6ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:59.640553"], ["updated_at", "2021-05-23 23:00:59.640553"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:00:59.650459"], ["updated_at", "2021-05-23 23:00:59.650459"]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:00:59.652258"], ["updated_at", "2021-05-23 23:00:59.652258"]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Update (0.3ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 23:00:59.659617"], ["id", 980190963]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (330.1ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (363.9ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:01:07.647465', '2021-05-23 23:01:07.647465');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:01:07.647465', '2021-05-23 23:01:07.647465');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:01:07.654745', '2021-05-23 23:01:07.654745');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:01:07.654745', '2021-05-23 23:01:07.654745');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:01:07.658482', '2021-05-23 23:01:07.658482');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:01:07.658482', '2021-05-23 23:01:07.658482')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.7ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:01:07.667942', '2021-05-23 23:01:07.667942');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-23 23:01:07.667942', '2021-05-23 23:01:07.667942');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-23 23:01:07.672897', '2021-05-23 23:01:07.672897');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-23 23:01:07.672897', '2021-05-23 23:01:07.672897');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-23 23:01:07.675894', '2021-05-23 23:01:07.675894');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-23 23:01:07.675894', '2021-05-23 23:01:07.675894')[0m
+  [1m[35m (93.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.816886"], ["updated_at", "2021-05-23 23:01:07.816886"]]
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:01:07.819904"], ["updated_at", "2021-05-23 23:01:07.819904"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.831778"], ["updated_at", "2021-05-23 23:01:07.831778"]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEndereco Create (0.3ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:01:07.833892"], ["updated_at", "2021-05-23 23:01:07.833892"]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (0.2ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-23 23:01:07.843105"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.851773"], ["updated_at", "2021-05-23 23:01:07.851773"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.2ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:01:07.856822"], ["updated_at", "2021-05-23 23:01:07.856822"]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_referencia_pra_usuario
+------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.858724"], ["updated_at", "2021-05-23 23:01:07.858724"]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.866311"], ["updated_at", "2021-05-23 23:01:07.866311"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-23 23:01:07.873361"], ["updated_at", "2021-05-23 23:01:07.873361"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EnderecoTest: test_criando_endereco_sem_cep
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.2ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-23 23:01:07.886375"], ["updated_at", "2021-05-23 23:01:07.886375"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.1ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (281.6ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (301.8ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.4ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-24 01:41:48.356778', '2021-05-24 01:41:48.356778');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-24 01:41:48.356778', '2021-05-24 01:41:48.356778');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-24 01:41:48.366702', '2021-05-24 01:41:48.366702');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-24 01:41:48.366702', '2021-05-24 01:41:48.366702');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-24 01:41:48.373193', '2021-05-24 01:41:48.373193');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-24 01:41:48.373193', '2021-05-24 01:41:48.373193')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "usuarios";
+DELETE FROM "enderecos";
+DELETE FROM "vacinacaos";
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-24 01:41:48.389670', '2021-05-24 01:41:48.389670');
+INSERT INTO "usuarios" ("id", "nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2021-05-06', 1, 'MyString', 'MyString', 1, 'MyString', '2021-05-24 01:41:48.389670', '2021-05-24 01:41:48.389670');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (980190962, 1, 'MyString', 'MyString', 'MyString', 'MyString', 1, '2021-05-24 01:41:48.399335', '2021-05-24 01:41:48.399335');
+INSERT INTO "enderecos" ("id", "cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (298486374, 1, 'MyString', 'MyString', 'MyString', 'MyString', 2, '2021-05-24 01:41:48.399335', '2021-05-24 01:41:48.399335');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 1, '2021-05-24 01:41:48.404827', '2021-05-24 01:41:48.404827');
+INSERT INTO "vacinacaos" ("id", "nome_vacina", "descricao_localizacao", "data", "horario", "usuario_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', '2021-05-09', '2000-01-01 16:31:50', 2, '2021-05-24 01:41:48.404827', '2021-05-24 01:41:48.404827')[0m
+  [1m[35m (39.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EnderecoTest: test_criando_endereco_sem_cep
+-------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.8ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.482562"], ["updated_at", "2021-05-24 01:41:48.482562"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (71.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+EnderecoTest: test_atualizando_endereco
+---------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.552211"], ["updated_at", "2021-05-24 01:41:48.552211"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_cep
+-----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.6ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.573129"], ["updated_at", "2021-05-24 01:41:48.573129"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.2ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+EnderecoTest: test_atualizando_endereco_sem_referencia_pra_usuario
+------------------------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Create (1.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.601786"], ["updated_at", "2021-05-24 01:41:48.601786"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+EnderecoTest: test_criando_endereco
+-----------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.7ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes-PE"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-24 01:41:48.621872"], ["updated_at", "2021-05-24 01:41:48.621872"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUsuario Create (1.3ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.628146"], ["updated_at", "2021-05-24 01:41:48.628146"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+UsuarioTest: test_criando_usuario
+---------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Load (0.3ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mEndereco Create (1.5ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-24 01:41:48.640952"], ["updated_at", "2021-05-24 01:41:48.640952"]]
+  [1m[35m (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsuarioTest: test_criando_usuario_sem_nome_da_mae
+-------------------------------------------------
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.5ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.655793"], ["updated_at", "2021-05-24 01:41:48.655793"]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mEndereco Create (0.4ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-24 01:41:48.658410"], ["updated_at", "2021-05-24 01:41:48.658410"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UsuarioTest: test_editando_usuario
+----------------------------------
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+UsuarioTest: test_editando_usuario_com_nome_com_um_caracte
+----------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? LIMIT ?[0m  [["cpf", 12345678956], ["LIMIT", 1]]
+  [1m[36mUsuario Create (0.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nome", "data_nascimento", "cpf", "senha", "nome_mae", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Ana Maria "], ["data_nascimento", "1999-05-21"], ["cpf", 12345678956], ["senha", "123456"], ["nome_mae", "Ana Cristina"], ["telefone", 87996226421], ["email", "anamariaa@email.com"], ["created_at", "2021-05-24 01:41:48.676375"], ["updated_at", "2021-05-24 01:41:48.676375"]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEndereco Create (2.1ms)[0m  [1m[32mINSERT INTO "enderecos" ("cep", "cidade", "bairro", "logradouro", "complemento", "usuario_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cep", 55360000], ["cidade", "Caetes"], ["bairro", "Centro"], ["logradouro", "Rua José Frazão. 25"], ["complemento", ""], ["usuario_id", 980190963], ["created_at", "2021-05-24 01:41:48.678415"], ["updated_at", "2021-05-24 01:41:48.678415"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUsuario Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."cpf" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["cpf", 12345678956], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "usuarios" WHERE "usuarios"."email" = ? AND "usuarios"."id" != ? LIMIT ?[0m  [["email", "anamariaa@email.com"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[36mUsuario Update (1.0ms)[0m  [1m[33mUPDATE "usuarios" SET "nome" = ?, "updated_at" = ? WHERE "usuarios"."id" = ?[0m  [["nome", "Ana Maria da Silva"], ["updated_at", "2021-05-24 01:41:48.687511"], ["id", 980190963]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
