@@ -50,31 +50,31 @@
   <%= form.fields_for :endereco do |form_endereco| %>
     <div class="field">
       <%= form_endereco.label :cep %>
-      <%= form_endereco.number_field :cep %>
+      <%= form_endereco.number_field :cep, id: "cep" %>
     </div>
 
     <div class="field">
       <%= form_endereco.label :cidade %>
-      <%= form_endereco.text_field :cidade %>
+      <%= form_endereco.text_field :cidade, id: "cidade" %>
     </div>
 
     <div class="field">
       <%= form_endereco.label :bairro %>
-      <%= form_endereco.text_field :bairro %>
+      <%= form_endereco.text_field :bairro, id: "bairro" %>
     </div>
 
     <div class="field">
       <%= form_endereco.label :logradouro %>
-      <%= form_endereco.text_field :logradouro %>
+      <%= form_endereco.text_field :logradouro, id: "logradouro" %>
     </div>
 
     <div class="field">
       <%= form_endereco.label :complemento %>
-      <%= form_endereco.text_field :complemento %>
+      <%= form_endereco.text_field :complemento, id: "complemento" %>
     </div>
     <% end %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'salvar' %>
   </div>
 <% end %>
