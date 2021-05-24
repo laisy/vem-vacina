@@ -32,4 +32,5 @@ class EnderecoTest < ActiveSupport::TestCase
     endereco = Endereco.new(cep: '55360000', cidade: 'Caetes', bairro: 'Centro', logradouro: 'Rua José Frazão. 25', complemento: '', usuario_id: usuario.id)
     assert_not endereco.update(cep: '55360000', cidade: 'Caetes-PE', bairro: 'Centro', logradouro: 'Rua José Frazão. 25', complemento: '', usuario_id: '')
   end
+  
 end
